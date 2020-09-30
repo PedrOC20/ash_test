@@ -21,7 +21,7 @@ defmodule AshTest.Resources.User do
       # for a global configuration of your default primary key
       primary_key? true
       allow_nil? false
-      writable? false
+      writable? true
       default &Ecto.UUID.generate/0
     end
 
@@ -29,7 +29,7 @@ defmodule AshTest.Resources.User do
       allow_nil? false
       primary_key? true
       constraints [
-        match: ~r/[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}/
+        match: ~r/^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,4}$/
       ]
     end
 
