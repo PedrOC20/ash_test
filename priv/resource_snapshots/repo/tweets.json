@@ -1,0 +1,44 @@
+{
+  "attributes": [
+    {
+      "allow_nil?": false,
+      "default": "nil",
+      "name": "body",
+      "primary_key?": false,
+      "references": null,
+      "type": "text"
+    },
+    {
+      "allow_nil?": false,
+      "default": "nil",
+      "name": "id",
+      "primary_key?": true,
+      "references": null,
+      "type": "binary_id"
+    },
+    {
+      "allow_nil?": false,
+      "default": "false",
+      "name": "public",
+      "primary_key?": false,
+      "references": null,
+      "type": "boolean"
+    },
+    {
+      "allow_nil?": true,
+      "default": "nil",
+      "name": "user_id",
+      "primary_key?": false,
+      "references": {
+        "destination_field": "id",
+        "table": "users"
+      },
+      "type": "binary_id"
+    }
+  ],
+  "base_filter": null,
+  "hash": "8090DE3560D5B38820AB6F36ED248F3DB6AA91410A728C0E01A5CFB8E3720EFE",
+  "identities": [],
+  "repo": "Elixir.AshTest.Resources.Repo",
+  "table": "tweets"
+}

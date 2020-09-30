@@ -1,0 +1,25 @@
+{
+  "attributes": [
+    {
+      "allow_nil?": false,
+      "default": "nil",
+      "name": "email",
+      "primary_key?": true,
+      "references": null,
+      "type": "text"
+    },
+    {
+      "allow_nil?": false,
+      "default": "nil",
+      "name": "id",
+      "primary_key?": true,
+      "references": null,
+      "type": "binary_id"
+    }
+  ],
+  "base_filter": null,
+  "hash": "9AC667D60B9B3B52259ADB5BD17D2C4D064B0377A3A2C9B50000CCD2297BE7FC",
+  "identities": [],
+  "repo": "Elixir.AshTest.Resources.Repo",
+  "table": "users"
+}
