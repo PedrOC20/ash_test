@@ -3,8 +3,16 @@
     {
       "allow_nil?": false,
       "default": "nil",
+      "name": "age",
+      "primary_key?": false,
+      "references": null,
+      "type": "integer"
+    },
+    {
+      "allow_nil?": false,
+      "default": "nil",
       "name": "email",
-      "primary_key?": true,
+      "primary_key?": false,
       "references": null,
       "type": "text"
     },
@@ -18,8 +26,16 @@
     }
   ],
   "base_filter": null,
-  "hash": "9AC667D60B9B3B52259ADB5BD17D2C4D064B0377A3A2C9B50000CCD2297BE7FC",
-  "identities": [],
+  "hash": "1B775A749E700E6FFCE0BE8D8C56DB51D2C241B2576A2DEE4E9386391A6EB154",
+  "identities": [
+    {
+      "base_filter": null,
+      "keys": [
+        "email"
+      ],
+      "name": "unique_email"
+    }
+  ],
   "repo": "Elixir.AshTest.Resources.Repo",
   "table": "users"
 }

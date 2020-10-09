@@ -22,9 +22,14 @@ defmodule AshTest.MixProject do
   # Run "mix help deps" to learn about dependencies.
   defp deps do
     [
-      {:ash, "~> 1.13.3"},
-      {:ash_postgres, "~> 0.22.0"},
-      {:jason, "~> 1.2"}
+      {:ash, "~> 1.15.1", override: true},
+      {:ash_postgres, "~> 0.23.2"},
+      {:ash_graphql, "~> 0.3.2"},
+      {:jason, "~> 1.2  "},
+      {:plug_cowboy, "~> 2.0"},
+      {:absinthe, "~> 1.5.3"},
+      {:absinthe_plug, "~> 1.5.0"},
+      {:corsica, "~> 1.1.3"}
       # {:dep_from_hexpm, "~> 0.3.0"},
       # {:dep_from_git, git: "https://github.com/elixir-lang/my_dep.git", tag: "0.1.0"}
     ]

@@ -1,5 +1,8 @@
 defmodule AshTest.Resources.Tweet do
   use Ash.Resource,
+    extensions: [
+      AshGraphql.Resource
+    ],
     data_layer: AshPostgres.DataLayer
 
     postgres do
@@ -45,5 +48,22 @@ defmodule AshTest.Resources.Tweet do
   relationships do
     belongs_to :user, AshTest.Resources.User,
       source_field: :user_id
+  end
+
+  graphql do
+    type :tweet
+
+    fields [:id]
+
+    queries do
+      get :get_tweet, :default
+      list :list_tweets, :default
+    end
+
+    mutations do
+      create :create_tweet, :default
+      update :update_tweet, :default
+      destroy :destroy_tweet, :default
+    end
   end
 end
